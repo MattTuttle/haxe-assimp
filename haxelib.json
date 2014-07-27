@@ -1,0 +1,11 @@
+{
+	"name":"assimp",
+	"url":"https://github.com/assimp/assimp",
+	"license":"BSD",
+	"tags":[],
+	"description":"Asset importer for 3D models",
+	"version":"1.0.0",
+	"releasenote":"Stable release",
+	"contributors":["heardtheword"],
+	"dependencies":{}
+}

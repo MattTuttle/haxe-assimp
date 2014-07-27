@@ -1,0 +1,217 @@
+<xml>
+
+	<set name="PLATFORM" value="android-10" if="android" />
+	<set name="PLATFORM" value="android-14" if="HXCPP_X86" />
+	<set name="HXCPP_CPP11" value="1" />
+
+	<include name="${HXCPP}/build-tool/BuildCommon.xml" />
+
+	<set name="ios" value="1" if="iphone" />
+
+	<set name="OUTPUT_DIR" value="../ndll" unless="OUTPUT_DIR" />
+
+	<files id="assimp">
+
+		<compilerflag value="-Iinclude" />
+		<compilerflag value="-Iassimp/code" />
+		<compilerflag value="-Iassimp/code/BoostWorkaround" />
+
+		<!-- dependencies -->
+		<file name="assimp/contrib/clipper/clipper.cpp" />
+		<file name="assimp/contrib/irrXML/irrXML.cpp" />
+		<file name="assimp/contrib/poly2tri/poly2tri/common/shapes.cc" />
+		<file name="assimp/contrib/poly2tri/poly2tri/sweep/advancing_front.cc" />
+		<file name="assimp/contrib/poly2tri/poly2tri/sweep/cdt.cc" />
+		<file name="assimp/contrib/poly2tri/poly2tri/sweep/sweep_context.cc" />
+		<file name="assimp/contrib/poly2tri/poly2tri/sweep/sweep.cc" />
+		<file name="assimp/contrib/unzip/ioapi.c" />
+		<file name="assimp/contrib/unzip/unzip.c" />
+		<file name="assimp/contrib/ConvertUTF/ConvertUTF.c" />
+
+		<file name="assimp/contrib/zlib/adler32.c" />
+		<file name="assimp/contrib/zlib/compress.c" />
+		<file name="assimp/contrib/zlib/crc32.c" />
+		<file name="assimp/contrib/zlib/deflate.c" />
+		<file name="assimp/contrib/zlib/gzclose.c" />
+		<file name="assimp/contrib/zlib/gzlib.c" />
+		<file name="assimp/contrib/zlib/gzread.c" />
+		<file name="assimp/contrib/zlib/gzwrite.c" />
+		<file name="assimp/contrib/zlib/infback.c" />
+		<file name="assimp/contrib/zlib/inffast.c" />
+		<file name="assimp/contrib/zlib/inflate.c" />
+		<file name="assimp/contrib/zlib/inftrees.c" />
+		<file name="assimp/contrib/zlib/trees.c" />
+		<file name="assimp/contrib/zlib/uncompr.c" />
+		<file name="assimp/contrib/zlib/zutil.c" />
+
+		<file name="assimp/code/3DSConverter.cpp" />
+		<file name="assimp/code/3DSExporter.cpp" />
+		<file name="assimp/code/3DSLoader.cpp" />
+		<file name="assimp/code/ACLoader.cpp" />
+		<file name="assimp/code/ASELoader.cpp" />
+		<file name="assimp/code/ASEParser.cpp" />
+		<file name="assimp/code/Assimp.cpp" />
+		<file name="assimp/code/AssimpCExport.cpp" />
+		<file name="assimp/code/AssimpPCH.cpp" />
+		<file name="assimp/code/B3DImporter.cpp" />
+		<file name="assimp/code/BaseImporter.cpp" />
+		<file name="assimp/code/BaseProcess.cpp" />
+		<file name="assimp/code/Bitmap.cpp" />
+		<file name="assimp/code/BlenderBMesh.cpp" />
+		<file name="assimp/code/BlenderDNA.cpp" />
+		<file name="assimp/code/BlenderLoader.cpp" />
+		<file name="assimp/code/BlenderModifier.cpp" />
+		<file name="assimp/code/BlenderScene.cpp" />
+		<file name="assimp/code/BlenderTessellator.cpp" />
+		<file name="assimp/code/BVHLoader.cpp" />
+		<file name="assimp/code/CalcTangentsProcess.cpp" />
+		<file name="assimp/code/COBLoader.cpp" />
+		<file name="assimp/code/ColladaExporter.cpp" />
+		<file name="assimp/code/ColladaLoader.cpp" />
+		<file name="assimp/code/ColladaParser.cpp" />
+		<file name="assimp/code/ComputeUVMappingProcess.cpp" />
+		<file name="assimp/code/ConvertToLHProcess.cpp" />
+		<file name="assimp/code/CSMLoader.cpp" />
+		<file name="assimp/code/DeboneProcess.cpp" />
+		<file name="assimp/code/DefaultIOStream.cpp" />
+		<file name="assimp/code/DefaultIOSystem.cpp" />
+		<file name="assimp/code/DefaultLogger.cpp" />
+		<file name="assimp/code/DXFLoader.cpp" />
+		<file name="assimp/code/Exporter.cpp" />
+		<file name="assimp/code/FBXAnimation.cpp" />
+		<file name="assimp/code/FBXBinaryTokenizer.cpp" />
+		<file name="assimp/code/FBXConverter.cpp" />
+		<file name="assimp/code/FBXDeformer.cpp" />
+		<file name="assimp/code/FBXDocument.cpp" />
+		<file name="assimp/code/FBXDocumentUtil.cpp" />
+		<file name="assimp/code/FBXImporter.cpp" />
+		<file name="assimp/code/FBXMaterial.cpp" />
+		<file name="assimp/code/FBXMeshGeometry.cpp" />
+		<file name="assimp/code/FBXModel.cpp" />
+		<file name="assimp/code/FBXNodeAttribute.cpp" />
+		<file name="assimp/code/FBXParser.cpp" />
+		<file name="assimp/code/FBXProperties.cpp" />
+		<file name="assimp/code/FBXTokenizer.cpp" />
+		<file name="assimp/code/FBXUtil.cpp" />
+		<file name="assimp/code/FindDegenerates.cpp" />
+		<file name="assimp/code/FindInstancesProcess.cpp" />
+		<file name="assimp/code/FindInvalidDataProcess.cpp" />
+		<file name="assimp/code/FixNormalsStep.cpp" />
+		<file name="assimp/code/GenFaceNormalsProcess.cpp" />
+		<file name="assimp/code/GenVertexNormalsProcess.cpp" />
+		<file name="assimp/code/HMPLoader.cpp" />
+		<file name="assimp/code/IFCBoolean.cpp" />
+		<file name="assimp/code/IFCCurve.cpp" />
+		<file name="assimp/code/IFCGeometry.cpp" />
+		<file name="assimp/code/IFCLoader.cpp" />
+		<file name="assimp/code/IFCMaterial.cpp" />
+		<file name="assimp/code/IFCOpenings.cpp" />
+		<file name="assimp/code/IFCProfile.cpp" />
+		<file name="assimp/code/IFCReaderGen.cpp" />
+		<file name="assimp/code/IFCUtil.cpp" />
+		<file name="assimp/code/Importer.cpp" />
+		<file name="assimp/code/ImporterRegistry.cpp" />
+		<file name="assimp/code/ImproveCacheLocality.cpp" />
+		<file name="assimp/code/IRRLoader.cpp" />
+		<file name="assimp/code/IRRMeshLoader.cpp" />
+		<file name="assimp/code/IRRShared.cpp" />
+		<file name="assimp/code/JoinVerticesProcess.cpp" />
+		<file name="assimp/code/LimitBoneWeightsProcess.cpp" />
+		<file name="assimp/code/LWOAnimation.cpp" />
+		<file name="assimp/code/LWOBLoader.cpp" />
+		<file name="assimp/code/LWOLoader.cpp" />
+		<file name="assimp/code/LWOMaterial.cpp" />
+		<file name="assimp/code/LWSLoader.cpp" />
+		<file name="assimp/code/MakeVerboseFormat.cpp" />
+		<file name="assimp/code/MaterialSystem.cpp" />
+		<file name="assimp/code/MD2Loader.cpp" />
+		<file name="assimp/code/MD3Loader.cpp" />
+		<file name="assimp/code/MD5Loader.cpp" />
+		<file name="assimp/code/MD5Parser.cpp" />
+		<file name="assimp/code/MDCLoader.cpp" />
+		<file name="assimp/code/MDLLoader.cpp" />
+		<file name="assimp/code/MDLMaterialLoader.cpp" />
+		<file name="assimp/code/MS3DLoader.cpp" />
+		<file name="assimp/code/NDOLoader.cpp" />
+		<file name="assimp/code/NFFLoader.cpp" />
+		<file name="assimp/code/ObjExporter.cpp" />
+		<file name="assimp/code/ObjFileImporter.cpp" />
+		<file name="assimp/code/ObjFileMtlImporter.cpp" />
+		<file name="assimp/code/ObjFileParser.cpp" />
+		<file name="assimp/code/OFFLoader.cpp" />
+		<file name="assimp/code/OgreBinarySerializer.cpp" />
+		<file name="assimp/code/OgreImporter.cpp" />
+		<file name="assimp/code/OgreMaterial.cpp" />
+		<file name="assimp/code/OgreStructs.cpp" />
+		<file name="assimp/code/OgreXmlSerializer.cpp" />
+		<file name="assimp/code/OptimizeGraph.cpp" />
+		<file name="assimp/code/OptimizeMeshes.cpp" />
+		<file name="assimp/code/PlyExporter.cpp" />
+		<file name="assimp/code/PlyLoader.cpp" />
+		<file name="assimp/code/PlyParser.cpp" />
+		<file name="assimp/code/PostStepRegistry.cpp" />
+		<file name="assimp/code/PretransformVertices.cpp" />
+		<file name="assimp/code/ProcessHelper.cpp" />
+		<file name="assimp/code/Q3BSPFileImporter.cpp" />
+		<file name="assimp/code/Q3BSPFileParser.cpp" />
+		<file name="assimp/code/Q3BSPZipArchive.cpp" />
+		<file name="assimp/code/Q3DLoader.cpp" />
+		<file name="assimp/code/RawLoader.cpp" />
+		<file name="assimp/code/RemoveComments.cpp" />
+		<file name="assimp/code/RemoveRedundantMaterials.cpp" />
+		<file name="assimp/code/RemoveVCProcess.cpp" />
+		<file name="assimp/code/SceneCombiner.cpp" />
+		<file name="assimp/code/ScenePreprocessor.cpp" />
+		<file name="assimp/code/SGSpatialSort.cpp" />
+		<file name="assimp/code/SkeletonMeshBuilder.cpp" />
+		<file name="assimp/code/SMDLoader.cpp" />
+		<file name="assimp/code/SortByPTypeProcess.cpp" />
+		<file name="assimp/code/SpatialSort.cpp" />
+		<file name="assimp/code/SplitByBoneCountProcess.cpp" />
+		<file name="assimp/code/SplitLargeMeshes.cpp" />
+		<file name="assimp/code/StandardShapes.cpp" />
+		<file name="assimp/code/STEPFileEncoding.cpp" />
+		<file name="assimp/code/STEPFileReader.cpp" />
+		<file name="assimp/code/STLExporter.cpp" />
+		<file name="assimp/code/STLLoader.cpp" />
+		<file name="assimp/code/Subdivision.cpp" />
+		<file name="assimp/code/TargetAnimation.cpp" />
+		<file name="assimp/code/TerragenLoader.cpp" />
+		<file name="assimp/code/TextureTransform.cpp" />
+		<file name="assimp/code/TriangulateProcess.cpp" />
+		<file name="assimp/code/UnrealLoader.cpp" />
+		<file name="assimp/code/ValidateDataStructure.cpp" />
+		<file name="assimp/code/VertexTriangleAdjacency.cpp" />
+		<file name="assimp/code/XFileExporter.cpp" />
+		<file name="assimp/code/XFileImporter.cpp" />
+		<file name="assimp/code/XFileParser.cpp" />
+		<file name="assimp/code/XGLLoader.cpp" />
+		<file name="src/ExternalInterface.cpp" />
+
+	</files>
+
+	<set name="DEBUGEXTRA" value="-debug" if="fulldebug" />
+
+	<target id="assimp" output="${LIBPREFIX}assimp${MSVC_LIB_VERSION}${DEBUGEXTRA}${LIBEXTRA}" tool="linker" toolid="${STD_MODULE_LINK}">
+
+		<outdir name="${OUTPUT_DIR}/${BINDIR}" />
+
+		<files id="assimp" />
+
+		<section if="mac">
+			<vflag name="-framework" value="Foundation" />
+			<vflag name="-framework" value="Carbon" />
+		</section>
+
+		<section unless="static_link">
+			<ext value=".so" />
+			<ext value=".ndll" if="windows || mac || linux" />
+		</section>
+
+	</target>
+
+	<target id="default">
+		<target id="assimp" />
+	</target>
+
+</xml>

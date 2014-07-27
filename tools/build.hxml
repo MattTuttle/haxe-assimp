@@ -1,0 +1,3 @@
+-neko run.n
+-main tools.Haxelib
+-lib assimp

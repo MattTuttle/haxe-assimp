@@ -1,0 +1,6 @@
+obj/
+ndll/
+run.n
+
+.DS_Store
+Thumbs.db

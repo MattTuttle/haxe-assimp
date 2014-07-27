@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+
+	<section unless="display">
+		<ndll name="assimp" if="included" />
+	</section>
+
+</extension>
