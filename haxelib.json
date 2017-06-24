@@ -2,10 +2,10 @@
 	"name":"assimp",
 	"url":"https://github.com/assimp/assimp",
 	"license":"BSD",
-	"tags":[],
-	"description":"Asset importer for 3D models",
-	"version":"1.0.0",
+	"tags":["3D", "fbx", "obj", "3ds", "model", "importer", "converter"],
+	"description":"Asset importer / converter for 3D models.",
+	"version":"1.0.1",
 	"releasenote":"Stable release",
-	"contributors":["heardtheword"],
+	"contributors":["heardtheword", "Tiago-Ling"],
 	"dependencies":{}
 }
