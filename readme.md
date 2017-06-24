@@ -19,9 +19,8 @@ Currently you have to build the library and install it locally through Haxelib:
 Pre-built binaries
 ------------------
 
-For convenience zipped binaries links are listed below. To install right-click the link, choose "Save link as...", download it and run `haxelib install <filename.zip>`:
-* Windows: [assimp-win.zip](release/assimp-win.zip)
-* Mac (coming soon)
+For convenience zipped binaries links are listed below. To install right-click the link, choose "Save link as...", download it and run `haxelib install haxe-assimp.zip`:
+* Windows and Mac: [haxe-assimp.zip](release/haxe-assimp.zip)
 
 Usage
 -----
@@ -34,4 +33,3 @@ Dependencies
 * Haxe 3.4.2
 * Hxcpp 3.4.64
 * Lime 2.9.1 and up (also working with latest release 5.2.1)
-
