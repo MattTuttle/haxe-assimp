@@ -14,6 +14,8 @@ Currently you have to build the library and install it locally through Haxelib:
 4. Zip the following files and folder: `run.n`, `haxelib.json`, `include.xml`, `ndll`
 5. Install the zipped library locally: `haxelib install haxe-assimp.zip`
 
+**Note**: On Windows the generated ndll will appear with a suffix "-xx" where *xx* will be your MSVC version. For the library to work there you'll have to rename the file to just *assimp.ndll*. This will fixed in the future.
+
 Pre-built binaries
 ------------------
 
