@@ -14,10 +14,10 @@ Currently you have to build the library and install it locally through Haxelib:
 4. Zip the following files and folder: `run.n`, `haxelib.json`, `include.xml`, `ndll`
 5. Install the zipped library locally: `haxelib install haxe-assimp.zip`
 
-Pre-build binaries
+Pre-built binaries
 ------------------
 
-For convenience zipped binaries links are listed below. To install download it and run `haxelib install <filename.zip>`:
+For convenience zipped binaries links are listed below. To install right-click the link, download it and run `haxelib install <filename.zip>`:
 * Windows: [assimp-win.zip](release/assimp-win.zip)
 * Mac (coming soon)
 
