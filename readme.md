@@ -25,3 +25,11 @@ Usage
 -----
 
 * Command line: `haxelib run assimp process <infile.format> <outfile.format>`
+
+Dependencies
+------------
+
+* Haxe 3.4.2
+* Hxcpp 3.4.64
+* Lime 2.9.1 and up (also working with latest release 5.2.1)
+
