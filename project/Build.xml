@@ -13,6 +13,7 @@
 	<files id="assimp">
 
 		<compilerflag value="-Iinclude" />
+		<compilerflag value="-Iassimp/include" />
 		<compilerflag value="-Iassimp/code" />
 		<compilerflag value="-Iassimp/code/BoostWorkaround" />
 

@@ -42,7 +42,7 @@ class Convert
 	#if neko
 	public static function loadNekoAPI()
 	{
-		var i = Lib.load("assimp","neko_init", 5);
+		var i = Lib.load("assimp-19","neko_init", 5);
 		if (i != null)
 		{
 			i(function(s) return new String(s), function(len:Int) { var r = []; if (len > 0) r[len - 1] = null; return r; }, null, true, false);
@@ -52,8 +52,8 @@ class Convert
 	#end
 
 	#if (neko || cpp)
-	private static var assimp_convert = Lib.load("assimp", "assimp_convert", 3);
-	private static var assimp_formats = Lib.load("assimp", "assimp_formats", 0);
+	private static var assimp_convert = Lib.load("assimp-19", "assimp_convert", 3);
+	private static var assimp_formats = Lib.load("assimp-19", "assimp_formats", 0);
 	#end
 
 }
